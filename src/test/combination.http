@@ -1,0 +1,13 @@
+### Find combinations from file
+POST http://localhost:8080/api/file?maxParts=6
+Content-Type: text/plain
+
+< ../../input.txt
+
+### save found combinations from file
+POST http://localhost:8080/api/file?maxParts=2
+Content-Type: text/plain
+
+< ../../input.txt
+
+>>! ../../output.txt
