@@ -1,16 +1,14 @@
 package be.anna.sixletterwords.domain;
 
-import org.springframework.stereotype.Component;
-
 import java.util.*;
 import java.util.stream.Collectors;
 
-@Component
 public class BacktrackingCombinationFinder implements CombinationFinder{
     private static final Comparator<Combination> OUTPUT_ORDER =
             Comparator.comparing(Combination::result)
                     .thenComparing(combination -> String.join("+", combination.parts()));
 
+    @Override
     public List<Combination> find(Collection<String> words, CombinationRules rules) {
         Objects.requireNonNull(words, "words must not be null");
         Objects.requireNonNull(rules, "rules must not be null");

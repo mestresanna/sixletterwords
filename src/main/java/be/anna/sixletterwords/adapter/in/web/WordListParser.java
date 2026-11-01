@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 @Component
 public class WordListParser {
 
-    private static finl Pattern WHITESPACE = Pattern.compile("\\s+");
+    private static final Pattern WHITESPACE = Pattern.compile("\\s+");
 
     public List<String> parse(String body) {
         if (body == null || body.isBlank()) {
