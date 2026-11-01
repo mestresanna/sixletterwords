@@ -1,9 +1,14 @@
 package be.anna.sixletterwords.domain;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Set;
+import java.util.Objects;
+import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-public class BacktrackingCombinationFinder implements CombinationFinder{
+public class BacktrackingCombinationFinder implements CombinationFinder {
     private static final Comparator<Combination> OUTPUT_ORDER =
             Comparator.comparing(Combination::result)
                     .thenComparing(combination -> String.join("+", combination.parts()));

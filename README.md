@@ -18,8 +18,8 @@ Combinations can have **any number of parts** (`f+oo+bar=foobar`), and both the 
 
 ```bash
 git clone https://github.com/mestresanna/sixletterwords.git
-cd SixLetterWords
-docker compose -f infrastructure/docker-compose.yml up --build
+cd sixletterwords
+docker compose -f infrastructure/docker-compose.yaml up --build
 ```
 
 The first build downloads dependencies and runs the full test suite, so it takes a minute or two. The application is ready when the log shows `Started SixLetterWordsApplication`. It listens on **http://localhost:8081**.
@@ -228,4 +228,4 @@ The end-to-end test runs on its own in-memory database (`application-test.proper
 
 ## Time spent
 
-About **X hours** in total, including setup, implementation, tests and this README.
+About **3 hours** in total, including setup, implementation, tests and this README.

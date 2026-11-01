@@ -44,5 +44,5 @@ bin/
 .DS_Store
 
 data/
-*.mv-db
+*.mv.db
 output*
